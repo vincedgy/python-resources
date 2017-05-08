@@ -1,0 +1,866 @@
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 06:54:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 06:55:31 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:57:15 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 06:57:15 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:15 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:15 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:15 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:15 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:15 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:15 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:33 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 06:57:33 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:33 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:33 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:33 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:33 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:33 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:33 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:33 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 06:57:44 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 06:57:44 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:57:44 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:44 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:44 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:44 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:44 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:44 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:44 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:44 PM root         INFO     username:'Ed Jones
+05/08/2017 06:57:44 PM root         INFO     username:'Ed Jones
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 06:58:10 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 06:58:10 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:00:19 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:00:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:02:05 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:02:05 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:02:23 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:02:23 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:02:40 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:40 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:02:56 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:02:56 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:03:17 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:03:17 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:03:33 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:03:33 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:04:14 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:04:14 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:05:00 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     ((1L,), (2L,), (3L,), (4L,), (5L,), (6L,), (7L,), (8L,)  ... displaying 10 of 39 total bound parameter sets ...  (39L,), (40L,))
+05/08/2017 07:05:00 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:05:04 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     ((41L,), (42L,), (43L,), (44L,))
+05/08/2017 07:05:04 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:05:06 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     ((45L,), (46L,), (47L,), (48L,))
+05/08/2017 07:05:06 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:07:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:07:50 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:08:11 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:08:37 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:08:46 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `address`
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     ROLLBACK
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     
+CREATE TABLE address (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	user INTEGER, 
+	fullname VARCHAR(256) NOT NULL, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(user) REFERENCES users (id)
+)
+
+
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:09:29 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:12:19 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     SELECT addresses.id AS addresses_id, addresses.email_adress AS addresses_email_adress, addresses.user_id AS addresses_user_id 
+FROM addresses 
+WHERE %s = addresses.user_id
+05/08/2017 07:12:19 PM sqlalchemy.engine.base.Engine INFO     (49L,)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ROLLBACK
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ROLLBACK
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     
+CREATE TABLE users (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	name VARCHAR(64), 
+	fullname VARCHAR(256), 
+	password VARCHAR(256), 
+	PRIMARY KEY (id)
+)
+
+
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     
+CREATE TABLE addresses (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	email_adress VARCHAR(256) NOT NULL, 
+	user_id INTEGER, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(user_id) REFERENCES users (id)
+)
+
+
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:15:13 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SELECT addresses.id AS addresses_id, addresses.email_adress AS addresses_email_adress, addresses.user_id AS addresses_user_id 
+FROM addresses 
+WHERE %s = addresses.user_id
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     (1L,)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     (1L,)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SELECT addresses.id AS addresses_id, addresses.email_adress AS addresses_email_adress, addresses.user_id AS addresses_user_id 
+FROM addresses 
+WHERE %s = addresses.user_id
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     (2L,)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     (2L,)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SELECT addresses.id AS addresses_id, addresses.email_adress AS addresses_email_adress, addresses.user_id AS addresses_user_id 
+FROM addresses 
+WHERE %s = addresses.user_id
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     (3L,)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     (3L,)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     SELECT addresses.id AS addresses_id, addresses.email_adress AS addresses_email_adress, addresses.user_id AS addresses_user_id 
+FROM addresses 
+WHERE %s = addresses.user_id
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     (4L,)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     (4L,)
+05/08/2017 07:15:13 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SHOW VARIABLES LIKE 'sql_mode'
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SELECT DATABASE()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     show collation where `Charset` = 'utf8' and `Collation` = 'utf8_bin'
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8) COLLATE utf8_bin AS anon_1
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `users`
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     DESCRIBE `addresses`
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ('ed', 'Ed Jones', 'edspassword')
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users 
+WHERE users.name = %s 
+ LIMIT %s
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ('ed', 1)
+05/08/2017 07:15:59 PM root         INFO     <User(name='ed', fullname='Ed Jones', password='edspassword')>
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ('wendy', 'Wendy Williams', 'foobar')
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ('mary', 'Mary Contrary', 'xxg527')
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     INSERT INTO users (name, fullname, password) VALUES (%s, %s, %s)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ('fred', 'Fred Flinstone', 'xxx')
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     select fullname from users
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     BEGIN (implicit)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SELECT users.id AS users_id, users.name AS users_name, users.fullname AS users_fullname, users.password AS users_password 
+FROM users ORDER BY users.id
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SELECT addresses.id AS addresses_id, addresses.email_adress AS addresses_email_adress, addresses.user_id AS addresses_user_id 
+FROM addresses 
+WHERE %s = addresses.user_id
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     (5L,)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     (5L,)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SELECT addresses.id AS addresses_id, addresses.email_adress AS addresses_email_adress, addresses.user_id AS addresses_user_id 
+FROM addresses 
+WHERE %s = addresses.user_id
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     (6L,)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     (6L,)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SELECT addresses.id AS addresses_id, addresses.email_adress AS addresses_email_adress, addresses.user_id AS addresses_user_id 
+FROM addresses 
+WHERE %s = addresses.user_id
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     (7L,)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     (7L,)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     SELECT addresses.id AS addresses_id, addresses.email_adress AS addresses_email_adress, addresses.user_id AS addresses_user_id 
+FROM addresses 
+WHERE %s = addresses.user_id
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     (8L,)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     DELETE FROM users WHERE users.id = %s
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     (8L,)
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     COMMIT
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     
+DROP TABLE users
+05/08/2017 07:15:59 PM sqlalchemy.engine.base.Engine INFO     ()
+05/08/2017 07:17:41 PM sqlalchemy.pool.QueuePool ERROR    Exception during reset or similar
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/pool.py", line 687, in _finalize_fairy
+    fairy._reset(pool)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/pool.py", line 829, in _reset
+    pool._dialect.do_rollback(self)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/base.py", line 1575, in do_rollback
+    dbapi_connection.rollback()
+OperationalError: (2006, 'MySQL server has gone away')

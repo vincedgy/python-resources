@@ -2,8 +2,8 @@ version: '2'
 services:
   mariadb:
     image: mariadb
-    command: mysqld --innodb-buffer-pool-size=20M
-    volumes:
+    command: mysqld --innodb-buffer-pool-size=128M
+    volumes: 
       - "./mariadb:/var/lib/mysql:rw"
     environment:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
