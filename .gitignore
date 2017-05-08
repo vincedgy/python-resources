@@ -2,3 +2,4 @@
 venv
 .idea
 .vscode
+db/docker/mariadb

@@ -12,8 +12,16 @@ https://github.com/judy2k/command-line-talk
     pip install -r requirements.txt
     ```
 ### Scripts & Samples
-    * mycli (dir) : contains first version directly inspired by Web/Youtube ref (see up)
-    * click-expl??.py : different 'Click' (the CLI framework) examples
+    * cli : contains first version directly inspired by Web/Youtube ref (see up)
+    * AWS : python script wuth boto3
+    * csv : CSV file manipulations
+    * datatimes : datetime manipulations
+    * db : using databases and ORM
+    * encrypt : encryption
+    * rx : Reactive programming
+    * samples : various scripts
+    * webScraping : scrap a website to download things
+    * wotkWithExcel : its name says everything right ?
 
 ## Virtual Env
     ```
