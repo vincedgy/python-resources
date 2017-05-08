@@ -1,6 +1,7 @@
 # python-resources
 My python scripts & resources
 
+## One very inspiring talk and github repo for CLI
 https://github.com/judy2k/command-line-talk
 
 ## Scripts & Files

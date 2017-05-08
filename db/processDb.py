@@ -28,4 +28,5 @@ def create_tables():
     ins = users.insert()
     print(ins)
 
-
+if '__name__' == '__main__':
+    create_tables()
