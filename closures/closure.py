@@ -12,4 +12,6 @@ def decorator_function(original_function):
 def display():
     print('display function ran')
 
+#display = decorator_function(display)
+
 display()
