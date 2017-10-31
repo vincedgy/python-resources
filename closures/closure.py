@@ -1,15 +1,15 @@
 # Decorators 
 """ """
+from __future__ import print_function
 
-def outer_function(msg):
-    message = 'Hi'
-    def inner_function():
-        print '{}'.format(msg)
-    return inner_function
+def decorator_function(original_function):
+    def wrapper_function():
+        return original_function()
+    return wrapper_function
 
-hi_func = outer_function('Hi')
-hello_func = outer_function('Hello')
+def display():
+    print('display function ran')
 
-hi_func()
-hello_func()
+decorator_display = decorator_function(display)
 
+decorator_display()
