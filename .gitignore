@@ -4,3 +4,5 @@ venv
 .vscode
 .log
 db/docker/mariadb
+venv3
+.venv3
