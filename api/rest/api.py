@@ -31,4 +31,3 @@ def addTask(group_name: str, group: Group):
         raise HTTPException(status_code=404, detail='Group not found')
     job = q.enqueue(runTask, group_name, group.owner, group.description)
     return {'job': job.id}
-    
