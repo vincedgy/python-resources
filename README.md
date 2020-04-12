@@ -1,3 +1,6 @@
+![](https://scrutinizer-ci.com/g/vincedgy/python-resources/badges/quality-score.png?b=master)
+![](https://scrutinizer-ci.com/g/vincedgy/python-resources/badges/code-intelligence.svg?b=master)
+
 # python-resources
 My python scripts & resources
 
