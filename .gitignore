@@ -7,3 +7,4 @@ venv
 db/docker/mariadb
 venv3
 .venv3
+*.csv
