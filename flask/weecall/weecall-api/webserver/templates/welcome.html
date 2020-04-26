@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Welcome</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="stylesheet"
+      type= "text/css"
+      href="{{ url_for('static', filename='styles/styles.css') }}"
+    />
+
+  </head>
+  <body>
+    <h1>Welcome</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt maiores
+      iure alias laborum hic pariatur quasi consequatur temporibus ratione!
+      Labore hic laudantium vitae blanditiis officiis porro impedit asperiores
+      harum!
+    </p>
+
+    <div class="container">
+      <div class="posts">
+        {% for post in posts %}
+        <div class="post">
+          <h2>{{ post.title }}</h2>
+          <h4>{{ post.author }}</h4>
+          <h5>{{ post.date_posted }}</h5>
+          <p>{{ post.content }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

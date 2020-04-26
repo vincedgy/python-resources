@@ -8,3 +8,5 @@ db/docker/mariadb
 venv3
 .venv3
 *.csv
+__MACOSX
+_datascience/pandas/.ipynb_checkpoints
