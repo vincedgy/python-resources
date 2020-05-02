@@ -1,0 +1,23 @@
+{% extends "layout/default.html" %}
+{% block content %}
+  <div class="container">
+    <h1>Posts</h1>  
+    {% for post in posts %}
+    <div class="row">
+      <div class="col-sm">
+
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <img class="card-img-top" src="{{ url_for('static', filename='post.png') }}" alt="Image">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">By {{ post.author }} on {{ post.date_posted }}</h6>
+            <p class="card-text">{{ post.content }}</>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+      </div>    
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}
