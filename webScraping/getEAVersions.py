@@ -1,89 +1,82 @@
+import os
+import requests
+import platform
+import logging
+import json
+import urllib3
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from colorama import init, Fore, Back, Style
+
+init()
+
+# urllib3.disable_warnings()
+logging.captureWarnings(True)
 
 # Initialize options
-options = Options()
-options = webdriver.FirefoxOptions()
+options = webdriver.ChromeOptions()
 options.headless = True
 # Initialize options
-profile = webdriver.FirefoxProfile()
-profile.set_preference("browser.cache.disk.enable", False)
-profile.set_preference("browser.cache.memory.enable", False)
-profile.set_preference("browser.cache.offline.enable", False)
-profile.set_preference("network.http.use-cache", False)
-profile.update_preferences()
+# cap = webdriver.DesiredCapabilities()
+# profile.set_preference("browser.cache.disk.enable", False)
+# profile.set_preference("browser.cache.memory.enable", False)
+# profile.set_preference("browser.cache.offline.enable", False)
+# profile.set_preference("network.http.use-cache", False)
+# profile.update_preferences()
 
 # Launch driver
-DRIVER = webdriver.Firefox(firefox_profile=profile,
-                           executable_path=r'drivers/macos/geckodriver',
-                           options=options)
-DRIVER.delete_all_cookies()
-
-PATHS = [{
-    "name": "DO",
-    "env": "PROD",
-    "url": "https://donneursdordre.e-attestations.com/EAttestationsDO/",
-    "className": "invisible-version-label"
-}, {
-    "name": "DO",
-    "env": "DEMO",
-    "url": "https://demo.e-attestations.com/EAttestationsDO/",
-    "className": "invisible-version-label"
-}, {
-    "name": "DO",
-    "env": "SANDBOX",
-    "url": "https://donneursdordre.dev-e-attestations.com/EAttestationsDO/",
-    "className": "invisible-version-label"
-}, {
-    "name": "DO",
-    "env": "RECETTE",
-    "url": "https://do01.dev-uservice.dev-e-attestations.com/EAttestationsDO/",
-    "className": "invisible-version-label"
-}, {
-    "name": "DE",
-    "env": "PROD",
-    "url":
-    "https://declarants.e-attestations.com/EAttestationsFO/fo/E-Attestations.html",
-    "className": "invisible-version-label"
-}, {
-    "name": "DE",
-    "env": "DEMO",
-    "url":
-    "https://demo.e-attestations.com/EAttestationsFO/fo/E-Attestations.html",
-    "className": "invisible-version-label"
-}, {
-    "name": "DE",
-    "env": "SANDBOX",
-    "url":
-    "https://declarant.dev-e-attestations.com/EAttestationsFO/fo/E-Attestations.html",
-    "className": "invisible-version-label"
-}, {
-    "name": "DE",
-    "env": "RECETTE",
-    "url":
-    "https://fo01.dev-uservice.dev-e-attestations.com/EAttestationsFO/fo/E-Attestations.html",
-    "className": "invisible-version-label"
-}]
+dir_path = os.path.dirname(os.path.realpath(__file__))
+ostype = "macos"
+if platform.system() == 'Linux':
+    ostype = "linux"
 
 
 def get_elem(url, class_name):
     """Wait and fetch on element from url for a class"""
-    DRIVER.get(url)
+
     try:
-        version = WebDriverWait(DRIVER, 20).until(
-            EC.presence_of_element_located((By.CLASS_NAME, class_name)))
-        return version.get_attribute('innerHTML')
-    except TimeoutException:
-        pass
+        r = requests.get(url, verify=False, timeout=3)
+        r.raise_for_status()
+        try:
+            driver.get(url)
+            version = WebDriverWait(driver=driver, timeout=2).until(
+                EC.presence_of_element_located((By.CLASS_NAME, class_name)))
+            return version.get_attribute('innerHTML')
+        except TimeoutException:
+            raise Exception('timeout')
+    except requests.exceptions.Timeout:
+        raise Exception('timeout')
+    except requests.exceptions.ConnectTimeout:
+        raise Exception('unreachable')
+    except requests.exceptions.RequestException as e:
+        raise Exception(e)
 
 
-for item in PATHS:
-    print("%s [%s]: %s" %
-          (item['name'], item['env'],
-           get_elem(url=item['url'], class_name=item['className'])))
+print("Start webscraping EA webapps Versions")
 
-DRIVER.close()
+with open(f'{dir_path}/config.json', 'r') as f:
+    loaded_json = json.loads(f.read())
+sorted_list = sorted(loaded_json, key=lambda k: k['env'])
+
+if len(sorted_list) > 0:
+    print("Initializing Chromedriver...")
+    driver = webdriver.Chrome(executable_path=f'{dir_path}/drivers/{ostype}/chromedriver')
+
+    for item in sorted_list:
+
+        catch = "unknown"
+        name = item['name']
+        env = item['env']
+        url = item['url']
+        class_name = item['className']
+
+        try:
+            catch = get_elem(url=url, class_name=class_name)
+            print(f'{name} [{env}]: {Fore.GREEN}{catch}{Style.RESET_ALL}')
+        except Exception as err:
+            print(Fore.RED + f'{name} [{env}]: {err}' + Style.RESET_ALL)
+
+    driver.close()

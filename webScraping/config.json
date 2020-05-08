@@ -1,0 +1,68 @@
+[{
+    "name": "DO",
+    "env": "PROD",
+    "url": "https://donneursdordre.e-attestations.com/EAttestationsDO/",
+    "className": "invisible-version-label"
+}, {
+    "name": "DO",
+    "env": "DEMO",
+    "url": "https://demo.e-attestations.com/EAttestationsDO/",
+    "className": "invisible-version-label"
+}, {
+    "name": "DO",
+    "env": "SANDBOX",
+    "url": "https://donneursdordre.dev-e-attestations.com/EAttestationsDO/",
+    "className": "invisible-version-label"
+}, {
+    "name": "DO",
+    "env": "RECETTE",
+    "url": "https://do01.dev-uservice.dev-e-attestations.com/EAttestationsDO/",
+    "className": "invisible-version-label"
+}, {
+    "name": "DO",
+    "env": "TEST",
+    "url": "https://donneursdordre.test-e-attestations.com/EAttestationsDO/",
+    "className": "invisible-version-label"
+},{
+    "name": "DO",
+    "env": "NEXT",
+    "url": "https://next.e-attestations.com/EAttestationsDO/",
+    "className": "invisible-version-label"
+},{
+    "name": "DE",
+    "env": "PROD",
+    "url":
+        "https://declarants.e-attestations.com/EAttestationsFO/fo/E-Attestations.html",
+    "className": "invisible-version-label"
+}, {
+    "name": "DE",
+    "env": "NEXT",
+    "url":
+        "https://next.e-attestations.com/EAttestationsFO/fo/E-Attestations.html",
+    "className": "invisible-version-label"
+},{
+    "name": "DE",
+    "env": "DEMO",
+    "url":
+        "https://demo.e-attestations.com/EAttestationsFO/fo/E-Attestations.html",
+    "className": "invisible-version-label"
+}, {
+    "name": "DE",
+    "env": "SANDBOX",
+    "url":
+        "https://declarant.dev-e-attestations.com/EAttestationsFO/fo/E-Attestations.html",
+    "className": "invisible-version-label"
+}, {
+    "name": "DE",
+    "env": "RECETTE",
+    "url":
+        "https://fo01.dev-uservice.dev-e-attestations.com/EAttestationsFO/fo/E-Attestations.html",
+    "className": "invisible-version-label"
+},
+{
+    "name": "DE",
+    "env": "TEST",
+    "url":
+        "https://declarant.test-e-attestations.com/EAttestationsFO/fo/E-Attestations.html",
+    "className": "invisible-version-label"
+}]
