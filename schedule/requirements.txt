@@ -1,0 +1,2 @@
+-i https://pypi.org/simple
+schedule==0.6.0
